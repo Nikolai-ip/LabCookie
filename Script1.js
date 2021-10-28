@@ -40,9 +40,10 @@ document.querySelector("#reset").addEventListener("click", () => {
     setCookie('count', 0);
     setCookie('name', "");
     setCookie('date', undefined);
+    document.getElementById("button_sign").style.display = "block";
 })
-
-if (getCookie('date') === undefined) {
+console.log(getCookie('date'));
+if (getCookie('date') == undefined) {
     setCookie('date', new Date().getTime());
     document.getElementById("time").value = "";
 }
