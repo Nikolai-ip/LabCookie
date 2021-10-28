@@ -38,8 +38,8 @@ document.getElementById("visits").value = getCookie('count'); //установк
 
 document.querySelector("#reset").addEventListener("click", () => {
     setCookie('count', 0);
-    setCookie('name', undefined);
-    setCookie('date', 0);
+    setCookie('name', "");
+    setCookie('date', "");
 })
 
 if (getCookie('date') === undefined) {
