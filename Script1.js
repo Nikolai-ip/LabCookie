@@ -40,7 +40,6 @@ document.querySelector("#reset").addEventListener("click", () => {
     setCookie('count', 0);
     setCookie('name', "");
     setCookie('date', undefined);
-    document.getElementById("button_sign").style.display = "block";
 })
 console.log(getCookie('date'));
 if (getCookie('date') == undefined) {
@@ -68,8 +67,11 @@ function signOn() {
         setCookie('name', name.value, { secure: true, 'max-age': 3600 });
     }
     }
-    if (getCookie('name') != undefined) {
-        document.getElementById("Hello").value = getCookie('name');
-        document.getElementById("button_sign").style.display = "none";
-    }
+if (getCookie('name') != undefined || getCookie('name') == "") {
+    document.getElementById("Hello").value = getCookie('name');
+    document.getElementById("button_sign").style.display = "none";
+}
+else {
+    document.getElementById("button_sign").style.display = "block";
+}
 
