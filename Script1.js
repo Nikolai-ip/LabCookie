@@ -39,7 +39,7 @@ document.getElementById("visits").value = getCookie('count'); //установк
 document.querySelector("#reset").addEventListener("click", () => {
     setCookie('count', 0);
     setCookie('name', "");
-    setCookie('date', "");
+    setCookie('date', undefined);
 })
 
 if (getCookie('date') === undefined) {
