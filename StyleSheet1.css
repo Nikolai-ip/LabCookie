@@ -1,0 +1,25 @@
+﻿.form {
+    background: #D0FBFF;
+    margin: 30px 20px;
+    width: 400px;
+    height: 290px;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.text {
+    margin: 10px;
+    font-family: Calibri;
+}
+
+#scales {
+    width: 200px;
+}
+
+button {
+    
+    width: 150px;
+    position: relative;
+    left: 110px;
+    margin: 8px;
+}
