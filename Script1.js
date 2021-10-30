@@ -65,11 +65,12 @@ let name = document.getElementById("name");
 function signOn() {
     if (name.value == "Kolya" || name.value == "Vasya") {
         setCookie('name', name.value, { secure: true, 'max-age': 3600 });
+        document.getElementById("Hello").value = getCookie('name');
     }
     }
-if (getCookie('name') != undefined || getCookie('name') != "") {
-    document.getElementById("Hello").value = getCookie('name');
-    document.getElementById("button_sign").style.display = "none";
+if (getCookie('name') == undefined || getCookie('name') == "") {
+   
+    document.getElementById("button_sign").style.display = "block";
 }
 else {
     document.getElementById("button_sign").style.display = "none";
