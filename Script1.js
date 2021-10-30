@@ -28,17 +28,17 @@ function setCookie(name, value, options = {}) {
     document.cookie = updatedCookie;
 }
 
-let count = getCookie('count');
+
+let count = getCookie('count'); 
 if (count == undefined) {
     count = 0;
 }
 setCookie('count', ++count);
-document.getElementById("visits").value = getCookie('count'); //установка значения в поле
+document.getElementById("visits").value = getCookie('count'); //установка значения в поле 
 
 document.querySelector("#reset").addEventListener("click", () => {
-    setCookie('count', 0);
+    setCookie('count', 0);  
     setCookie('name', "");
-    document.getElementById("Hello").value = getCookie('name');
     setCookie('date', undefined);
 })
 console.log(getCookie('date'));
@@ -59,18 +59,19 @@ else {
     setCookie('date', new Date().getTime());
 }
 
+
 let name = document.getElementById("name");
 
 function signOn() {
     if (name.value == "Kolya" || name.value == "Vasya") {
         setCookie('name', name.value, { secure: true, 'max-age': 3600 });
     }
-}
-if (document.getElementById("Hello").value = "") {
+    }
+if (getCookie('name') != undefined || getCookie('name') != "") {
     document.getElementById("Hello").value = getCookie('name');
-    document.getElementById("button_sign").style.display = "block";
+    document.getElementById("button_sign").style.display = "none";
 }
 else {
     document.getElementById("button_sign").style.display = "none";
-    
 }
+
