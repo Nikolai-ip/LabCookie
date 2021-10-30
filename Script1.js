@@ -39,7 +39,8 @@ document.getElementById("visits").value = getCookie('count'); //установк
 document.querySelector("#reset").addEventListener("click", () => {
     setCookie('count', 0);  
     setCookie('name', "");
-    setCookie('date', undefined);
+    document.getElementById("time").value = 0 + " " + 0 + " " + 0 + " " + 0 + " " + 0 + " ";
+
 })
 console.log(getCookie('date'));
 if (getCookie('date') == undefined) {
@@ -71,9 +72,10 @@ function signOn() {
 if (getCookie('name') == undefined || getCookie('name') == "") {
    
     document.getElementById("button_sign").style.display = "block";
-    document.getElementById("Hello").value = getCookie('name');
+    document.getElementById("Hello").value = "";
 }
 else {
+    document.getElementById("Hello").value = getCookie('name');
     document.getElementById("button_sign").style.display = "none";
 }
 
