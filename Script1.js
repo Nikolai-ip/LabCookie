@@ -65,12 +65,13 @@ let name = document.getElementById("name");
 function signOn() {
     if (name.value == "Kolya" || name.value == "Vasya") {
         setCookie('name', name.value, { secure: true, 'max-age': 3600 });
-        document.getElementById("Hello").value = getCookie('name');
+       
     }
     }
 if (getCookie('name') == undefined || getCookie('name') == "") {
    
     document.getElementById("button_sign").style.display = "block";
+    document.getElementById("Hello").value = getCookie('name');
 }
 else {
     document.getElementById("button_sign").style.display = "none";
